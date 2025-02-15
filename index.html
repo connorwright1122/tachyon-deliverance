@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachyon Deliverance</title>
+    <style>
+        body {
+            /* background-color: #ff00ff; */
+            background-image: url("https://media.istockphoto.com/id/1010501332/vector/stars-space-and-night-sky.jpg?s=612x612&w=0&k=20&c=aZIiOX61EYk_0j9T37vURZZtiCplOg66GlKtjlVBNr0=");
+            background-size: cover;
+            color: black;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .marquee {
+            font-size: 5em;
+            color: white;
+            /* background-color: blue; */
+            padding: 20px;
+            border: 5px dashed white;
+            margin: 20px;
+            /* animation: blink 4s infinite; */
+        }
 
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blinking-text {
+            font-size: 2em;
+            color: white;
+            text-shadow: 2px 2px brown;
+            animation: blink 1s infinite;
+        }
+
+        .content {
+            margin: 30px;
+            padding: 20px;
+            border: 10px ridge white;
+            background: linear-gradient(45deg, gray, silver, white);
+        }
+
+        a {
+            color: red;
+            text-decoration: underline;
+            font-size: 1.5em;
+        }
+
+        .gif-section {
+            margin: 20px;
+        }
+
+        .gif-section img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">TACHYON DELIVERANCE</div>
+
+    <div class="blinking-text">1 order of awesome sci fi action please!!!</div>
+
+    <div class="content">
+        <p>Aliens are REAL?!? </p>
+    </div>
+
+    <div class="gif-section">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDd2eHVteGVyb2w0M2VidTN1MnQ4end6a2hpZGR4cjIwd2F5OWtpYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1ULCj5IePUc8bI2OmI/giphy.gif" alt="JFK">
+        <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Spinning Earth">
+        <img src="https://media.giphy.com/media/YJDpfht5PU5i0/giphy.gif?cid=ecf05e474f5fe0jphgk5jnog0cszpdogn0ilridndmop3u5a&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Han Solo">
+    </div>
+
+    <!-- <p><a href="#">Click here to enter the unknown! 🔗</a></p> -->
+
+    <marquee behavior="scroll" direction="left" style="color: white; font-size: 2em;">COMING TO A GALAXY NEAR YOU 4/18! </marquee>
+</body>
+</html>
