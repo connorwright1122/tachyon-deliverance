@@ -1,0 +1,64 @@
+body {
+    /* background-color: #ff00ff; */
+    /* background-image: url("https://media.istockphoto.com/id/1010501332/vector/stars-space-and-night-sky.jpg?s=612x612&w=0&k=20&c=aZIiOX61EYk_0j9T37vURZZtiCplOg66GlKtjlVBNr0="); */
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW94b2V2bm94a3BtOWk2OGhxdjljZGRvcDFzaWphOHdoOWxraXd3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0K4lUxBzIOeJd1EA/giphy.gif");
+    background-size: cover;
+    color: white;
+    /*font-family: 'Comic Sans MS', cursive, sans-serif;*/
+    font-family: 'Comic Neue', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.marquee {
+    font-size: 5em;
+    color: white;
+    /* background-color: blue; */
+    padding: 20px;
+    border: 5px dashed white;
+    margin: 20px;
+    /* animation: blink 4s infinite; */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blinking-text {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px brown;
+    animation: blink 1s infinite;
+}
+
+.content {
+    margin: 30px;
+    padding: 20px;
+    border: 10px ridge white;
+    background: linear-gradient(45deg, gray, silver, white);
+}
+
+a {
+    color: red;
+    text-decoration: underline;
+}
+
+h1 {
+    color: white;
+}
+
+.gif-section {
+    margin: 20px;
+}
+
+.gif-section img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pixelify+Sans&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachyon Deliverance</title>
+</head>
+<body>
+    <h2><a href="/index.html">Back to Home Page</a></h2>
+
+    <h1>Creating Custom Action Figures from Cast Photos with Generative AI, Blender, and 3D Printing</h1>
+
+    <p>I created a set of custom action figures based on front-facing photos taken of every one of our cast members. Here's a break down how I pulled it off. This process leans heavily on free tools, some AI slop, and a bit of DIY tasks. If you're interested in making your own 3D figures (whether for gifts, films, or just for fun), here’s how I did it.</p>
+
+    <h2>Step 1: Start with a Good Photo</h2>
+    <p>On shoot day, I had club historians take front-facing photos of each cast member in a neutral pose. These images are the foundation of everything that follows, so good lighting, an empty background, and clarity help.</p>
+
+    <h2>Step 2: AI-Powered 2D to 3D Conversion</h2>
+    <p>Next, I used an AI model that can generate 3D meshes from a single photo. The tool I used is available for free on Hugging Face:<br>
+    👉 <a href="https://huggingface.co/spaces/innoai/TRELLIS" target="_blank">Trellis 2D-to-3D Model Generator</a></p>
+    <p>You can create around 5 models per day with the free plan. For higher-quality models, you might consider paid services like <strong>Meshy</strong> or more recent models like Huanyan 3D, which tend to offer cleaner and more detailed outputs.</p>
+
+    <h2>Step 3: Cleanup and Sculpting in Blender</h2>
+    <p>Once I had the GLB files (the 3D mesh format), I imported them into <strong>Blender</strong>, a free and powerful 3D modeling software.</p>
+    <p>In Blender, I cleaned up the auto-generated meshes by:</p>
+    <ul>
+        <li>Merging overlapping vertices</li>
+        <li>Closing non-manifold holes using the <a href="https://extensions.blender.org/add-ons/print3d-toolbox/" target="_blank">3D Print Toolbox addon</a></li>
+        <li>Hand-sculpting missing or unclear details (for example, the restaurant logo on one of the aprons)</li>
+    </ul>
+
+    <h2>Step 4: Preparing for 3D Printing</h2>
+    <p>After finishing the models, I exported them as <code>.STL</code> files and brought them into <strong>Bambu Studio</strong>, which is the slicer software for Bambu Labs 3D printers (but other slicers like Cura would work too).</p>
+    <p>At around <strong>3.75 inches (93mm)</strong> tall (the size of a classic Kenner Star Wars figure), each figure used about <strong>25g of PLA filament</strong> and took ~30 mins to print, including supports. For reference, a 1kg roll of PLA costs around <strong>$20</strong>, so it’s pretty affordable per figure.</p>
+    <p><em>Tip: Some public libraries offer free 3D printing access—though you may need to bring your own filament. I had access to GT's makerspaces, so I didn't have to pay :)</em></p>
+
+    <h2>Step 5: Post-Processing and Painting</h2>
+    <p>After printing:</p>
+    <ul>
+        <li>I removed the support material</li>
+        <li>Smoothed out the rougher areas with <strong>sandpaper</strong></li>
+        <li>Painted each one by hand using <strong>acrylic paint</strong></li>
+    </ul>
+    <p>If I had more time, I would’ve used <strong>spray paint</strong> to get a smoother finish and help blend the layer lines better—but even with acrylics, the results came out as charmingly janky as I wanted them to be.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>The process isn’t exactly fast, but it’s doable—even under a time crunch. If you have access to a <strong>resin printer</strong>, you can skip a lot of the sanding and get smoother results, though resin tends to be messier and more expensive.</p>
+    <p>There are probably faster or more streamlined ways to do this, but this workflow got the job done—and it was a fun mix of AI, artistry, and problem-solving. Hope this breakdown helps someone out there!</p>
+
+</body>
+</html>
