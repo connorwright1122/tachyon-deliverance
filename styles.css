@@ -62,3 +62,13 @@ h1 {
     height: 100px;
     margin: 10px;
 }
+
+.laurel-section {
+    margin: 20px;
+}
+
+.laurel-section img {
+    width: 200px;
+    //height: 100px;
+    //margin: 10px;
+}
