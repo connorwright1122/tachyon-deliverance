@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pixelify+Sans&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../photos/favicon-tachyon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachyon Deliverance</title>
+</head>
+<body>
+    <h2><a href="https://connorwright1122.github.io/tachyon-deliverance/">Back to Home Page</a></h2>
+
+    <h1>Building the Carnie Miniature & Parking Deck with Photogrammetry, Procedural Modeling, and AI</h1>
+
+    <p>
+        For <em>Tachyon Deliverance</em>, I wanted a to use highly specific models for a joke 90% of people would not get: a miniature version of my actual car, Carnie,
+        and a model of the actual parking deck we shot the Alien Thing scene at.
+        Instead of modeling everything from scratch, I made a hybrid workflow using photogrammetry, procedural Blender setups, 3D printing, hand painting, and some AI upscaling to give digitial models a tactile feel.
+    </p>
+
+    <h2>Carnie: From Real Car → Miniature → Digital Again</h2>
+
+    <h3>Step 1: 3D Scan the Actual Car</h3>
+    <p>
+        I started by <strong>3D scanning my real car</strong> using photogrammetry via LumaAI.
+        This gave me a dense but very messy mesh with lots of noise, holes, and weird topology, but also accurate proportions and real-world character that physical models would have.
+    </p>
+    <img src="../photos/blog-car/car-luma.jpg" width="30%" height="30%"></img>
+
+    <h3>Step 2: Cleanup in Blender</h3>
+    <p>
+        I brought the scan into <strong>Blender</strong> and did a cleanup pass:
+    </p>
+    <ul>
+        <li>Removed floating geometry and obvious scan artifacts</li>
+        <li>Closed holes and fixed non-manifold areas</li>
+        <li>Decimated and smoothed the mesh enough to be printable</li>
+    </ul>
+
+    <h3>Step 3: 3D Print the Car</h3>
+    <p>
+        Once the mesh was solid, I exported it and <strong>3D printed the car</strong>.
+        This step intentionally introduces even more jank: layer lines, soft edges,
+        and minor warping all help sell the miniature look later on.
+    </p>
+
+    <h3>Step 4: Hand Paint the Miniature</h3>
+    <p>
+        After printing, I <strong>hand painted the car</strong> with acrylics.
+        
+    </p>
+
+    <h3>Step 4.5: Miniature Shooting </h3>
+    <p>
+        I attempted to film the actual miniature against a green screen background by tying it to a fishing string. 
+        It was incredibly difficult to control, and without a custom motion rig I wasn't able to get the exact movements I wanted by hand.  
+        I eventually opted to just do the whole thing digitally. 
+    </p>
+    <img src="../photos/blog-car/car-green.png" width="30%" height="30%"></img>
+
+    <h3>Step 5: Scan the Miniature Back In</h3>
+    <p>
+        I <strong>3D scanned the painted miniature</strong> using a $10000 handheld 3D scanner provided by my friend who works at Georgia Tech's Invention Studio (who also plays Zlep in the cantina scene!).
+        Any Lidar-based 3D scanning app with would also be a good cheap alternative. 
+        This captured all the physical imperfections of the miniature that I wanted to make the digital model feel handmade. 
+    </p>
+    <img src="../photos/blog-car/car-scanning.JPG" width="30%" height="30%"></img>
+
+
+    <h3>Step 6: Final Cleanup in Blender</h3>
+    <p>
+        The scanned miniature went through one last Blender cleanup pass,
+        resulting in the final digital version of Carnie.
+        It’s a copy of a copy of a copy and in a way exactly what I wanted.
+        I also used photogrammetry for the delivery box. 
+    </p>
+    <img src="../photos/blog-car/car-clay.png" width="30%" height="30%"></img>
+    <img src="../photos/blog-car/car-color.png" width="30%" height="30%"></img>
+
+
+    <h2>The Parking Deck: AI, Photogrammetry, and Procedural Slabs of Concrete</h2>
+
+    <h3>AI Upscaling the Deck Texture</h3>
+    <p>
+        For the top surface of the parking deck, I started with a
+        <strong>Google Maps screenshot</strong> of the actual deck we shot at.
+        I ran it through <strong>Invoke AI</strong> to upscale the image and
+        manually removed Google Maps watermarks.
+    </p>
+    <img src="../photos/blog-car/deck-real.JPG" width="30%" height="30%"></img>
+    <img src="../photos/blog-car/deck-maps.png" width="30%" height="30%"></img>
+
+    <p>
+        The cleaned-up image was then <strong>projected directly onto the top of the deck model</strong>,
+        giving me real-world layout information without manually painting a texture.
+    </p>
+    <img src="../photos/blog-car/deck-top.png" width="30%" height="30%"></img>
+
+    <h3>Photogrammetry for Concrete Details</h3>
+    <p>
+        To ground the structure, I <strong>3D scanned a concrete block</strong> and a
+        <strong>parking-side barrier</strong>.
+        These scans became reusable detail pieces that could be tiled and repeated
+        without looking obviously procedural.
+    </p>
+
+    <h3>Procedural Deck Construction in Blender</h3>
+    <p>
+        The parking deck itself was built using <strong>array modifiers</strong> in Blender.
+        Each layer (floor, barrier, gaps) was designed once and stacked procedurally.
+    </p>
+
+    
+    <p>
+        This made it easy to:
+    </p>
+    <ul>
+        <li>Adjust scale and spacing quickly</li>
+        <li>Create exaggerated proportions</li>
+        <li>Keep everything editable late into the process</li>
+    </ul>
+    
+    <img src="../photos/blog-car/deck.png" width="30%" height="30%"></img>
+    
+    <h3>Bonus:</h3>
+    <ul>
+        <li> The asteroid in the scene is just a <strong>sphere with a custom Blender shader using procedural noise</strong></li>
+        <li> The delivery box was made using a photogrammetry scan of the actual box that I rigged and animated in Blender.</li>
+        <li> The backup camera 'watch your surroundings' overlay was made in Figma and is a recreation of my actual backup cam.</li>
+    </p>
+
+    <h2>Why This Workflow?</h2>
+    <p>
+        This pipeline is pretty creatively flexible and each step adds another layer of texture.
+        Scans introduce chaos, procedural systems keep things controllable,
+        and AI fills in gaps where speed matters more than purity.
+    </p>
+
+    <p>
+        It’s a cycle between the physical and digital worlds, and the artifacts
+        from this are what make the final assets feel more real.
+    </p>
+
+</body>
+</html>

@@ -15,14 +15,16 @@
 
     <h1>Creating Custom Action Figures from Cast Photos with Generative AI, Blender, and 3D Printing</h1>
 
-    <p>I created a set of custom action figures based on photos taken of every one of our cast members. Here's a break down how I pulled it off. This process leans heavily on free tools, some AI slop, and a bit of DIY tasks. If you're interested in making your own 3D figures (whether for gifts, films, or just for fun), here’s how I did it.</p>
+    <p>In the spirit of <a href="https://youtu.be/HnXKE0nfAjI?si=5GtEctdtGvL688YA" target="_blank">merchandising</a>, I created a set of custom action figures to thank every one of our cast members. The process I used to make them leans heavily on free tools, some AI slop, and a bit of DIY stuff. If you're interested in making your own 3D figures (whether for gifts, films, or just for fun), here’s a breakdown of how I pulled it off.</p>
+    <img src="../photos/blog-figures/actionfigures-clay.png" width="30%" height="30%"></img>
 
     <h2>Step 1: Start with a Good Photo</h2>
     <p>On shoot day, I had club historians take front-facing photos of each cast member in a neutral pose. These images are the foundation of everything that follows, so good lighting, an empty background, and clarity help.</p>
+    <img src="../photos/blog-figures/chef.PNG" width="30%" height="30%"></img>
 
     <h2>Step 2: AI-Powered 2D to 3D Conversion</h2>
     <p>Next, I used an AI model that can generate 3D meshes from a single photo. My model of choice was Hunyuan3D with a local ComfyUI workflow, but if you do not have a powerful GPU there are free tools available for free on Hugging Face:<br>
-    👉 <a href="https://huggingface.co/spaces/innoai/TRELLIS" target="_blank">Trellis 2D-to-3D Model Generator</a></p>
+    <a href="https://huggingface.co/spaces/innoai/TRELLIS" target="_blank">Trellis 2D-to-3D Model Generator</a></p>
     <p>You can create around 5 models per day with the free plan. For higher-quality models, you might consider paid services like <strong>Meshy</strong> or more recent models like Huanyan 3D, which tend to offer cleaner and more detailed outputs.</p>
 
     <h2>Step 3: Cleanup and Sculpting in Blender</h2>
@@ -33,6 +35,7 @@
         <li>Closing non-manifold holes using the <a href="https://extensions.blender.org/add-ons/print3d-toolbox/" target="_blank">3D Print Toolbox addon</a></li>
         <li>Hand-sculpting missing or unclear details (for example, the restaurant logo on one of the aprons)</li>
     </ul>
+    <img src="../photos/blog-figures/ActionFigures_1.PNG" width="30%" height="30%"></img>
 
     <h2>Step 4: Preparing for 3D Printing</h2>
     <p>After finishing the models, I exported them as <code>.STL</code> files and brought them into <strong>Bambu Studio</strong>, which is the slicer software for Bambu Labs 3D printers (but other slicers like Cura would work too).</p>
@@ -49,7 +52,7 @@
     <p>If I had more time, I would’ve used <strong>spray paint</strong> to get a smoother finish and help blend the layer lines better, but even with acrylics the results came out as charmingly janky as I wanted them to be.</p>
 
     <h2>Final Thoughts</h2>
-    <p>The process isn’t exactly fast, but it’s very doable even under a time crunch. If you have access to a <strong>resin printer</strong>, you can skip a lot of the sanding and get smoother results, though resin tends to be messier and more expensive.</p>
+    <p>The process isn’t the fastest, but it’s very doable even under a time crunch. If you have access to a <strong>resin printer</strong>, you can skip a lot of the sanding and get smoother results, though resin tends to be messier and more expensive.</p>
     <p>There are probably faster or more streamlined ways to do this, but this workflow got the job done and it was a fun mix of AI, artistry, and problem-solving. Hope this breakdown helps someone out there!</p>
 
     <img src="../photos/action-figures.png" width="50%" height="50%"></img>
